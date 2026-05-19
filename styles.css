@@ -1,0 +1,1366 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #d1d5db;
+}
+
+.status {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #78350f;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  min-height: 65vh;
+}
+
+.home-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.home-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 34px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  color: #111827;
+}
+
+.home-card h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.home-card p {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #4b5563;
+}
+
+.home-card strong {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 17px;
+}
+
+.home-card:hover {
+  transform: translateY(-2px);
+  transition: 0.15s;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card h3 {
+  margin-top: 22px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 7px;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: minmax(520px, 1.2fr) minmax(360px, 0.8fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.tutor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.tutor-card {
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 80px;
+}
+
+.tutor-card:hover {
+  opacity: 0.92;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 58px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  background: #111827;
+  color: white;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background: #374151;
+}
+
+.btn.success {
+  background: #047857;
+}
+
+.btn.danger {
+  background: #b91c1c;
+}
+
+.btn.light {
+  background: #e5e7eb;
+  color: #111827;
+  width: auto;
+  padding: 10px 16px;
+}
+
+.student-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.student-card strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.student-card span {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.attendance-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.small-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 4px;
+  background: #e5e7eb;
+  color: #111827;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.small-btn.active {
+  background: #111827;
+  color: white;
+}
+
+.list-item {
+  border-top: 1px solid #e5e7eb;
+  padding: 10px 0;
+}
+
+.list-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.list-item span {
+  display: block;
+  color: #4b5563;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.alert {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  color: #7f1d1d;
+}
+
+.alert strong,
+.alert span {
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1000px) {
+  .home-grid,
+  .home-grid.three,
+  .grid-two,
+  .grid-main {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn.light {
+    width: 100%;
+  }
+}
+.alert-button {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.alert-button small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7f1d1d;
+  opacity: 0.8;
+}
+
+.alert-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.attendance-dots {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0 7px;
+  align-items: center;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid #d1d5db;
+}
+
+.dot.present {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.dot.absent {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+.dot.justified {
+  background: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.dot.late {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.dot.present-comment {
+  background: linear-gradient(90deg, #16a34a 50%, #f97316 50%);
+  border-color: #16a34a;
+}
+
+.dot.empty {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+/* =========================
+   TAREAS INFODESK
+========================= */
+
+.subsection {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+}
+
+.subsection h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.task-card {
+  padding: 12px;
+  border: 1px solid #dbeafe;
+  border-left: 5px solid #2563eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-card strong {
+  font-size: 15px;
+  color: #111827;
+}
+
+.task-card span {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.3;
+}
+
+.task-card.resolved {
+  border-left-color: #16a34a;
+  background: #f0fdf4;
+  opacity: 0.8;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.task-actions .btn {
+  width: auto;
+  min-width: auto;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.subsection > input,
+.subsection > textarea,
+.subsection > select {
+  margin-bottom: 8px;
+}
+
+.subsection > textarea {
+  min-height: 70px;
+}
+
+/* =========================
+   MODAL HISTORIAL TAREAS
+========================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+
+.modal-card {
+  width: min(900px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.modal-header .btn {
+  width: auto;
+  min-width: auto;
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+/* =========================
+   COLORES PASTEL POR SECCIÓN
+========================= */
+
+.card {
+  background: #ffffff;
+}
+
+/* Infodesk - columna izquierda */
+.grid-main > .card:nth-child(1) {
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+/* Perfil / préstamos - columna derecha */
+.grid-main > .card:nth-child(2) {
+  background: #fffaf0;
+  border: 1px solid #fde68a;
+}
+
+/* Tareas de Infodesk */
+.subsection {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+}
+
+/* Tarjetas de tareas */
+.task-card {
+  background: #ffffff;
+  border: 1px solid #ddd6fe;
+  border-left: 5px solid #8b5cf6;
+}
+
+.task-card.resolved {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  border-left-color: #22c55e;
+}
+
+/* Préstamos abiertos */
+.list-item {
+  background: #ffffff;
+}
+
+/* Alertas */
+.alert {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+}
+
+/* Ficha de alumno */
+.student-card {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* Resultados de búsqueda */
+.search-results {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.search-item {
+  background: #ffffff;
+}
+
+/* =========================
+   LISTA COMPACTA TUTORES
+========================= */
+
+.student-card {
+  padding: 10px;
+  gap: 6px;
+}
+
+.attendance-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.attendance-buttons .small-btn {
+  padding: 5px 7px;
+  font-size: 11px;
+  border-radius: 7px;
+}
+
+.compact-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.tiny-btn {
+  width: auto;
+  min-width: auto;
+  padding: 5px 8px;
+  font-size: 11px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.tiny-btn:hover {
+  background: #f1f5f9;
+}
+
+.tiny-btn.has-comment {
+  border-color: #f97316;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.compact-comment {
+  min-height: 58px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.bottom-save-attendance {
+  position: sticky;
+  bottom: 12px;
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+  z-index: 5;
+}
+
+/* =========================
+   LISTA RÁPIDA DE ASISTENCIA
+========================= */
+
+.attendance-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.attendance-list-header h3 {
+  margin: 0;
+}
+
+.attendance-list-header span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.attendance-row-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  background: #f8fffb;
+}
+
+.attendance-row-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.attendance-student-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.attendance-student-info strong {
+  font-size: 13px;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.attendance-student-info span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.attendance-row-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.compact-attendance-buttons {
+  gap: 4px;
+}
+
+.compact-status-btn {
+  width: 28px;
+  min-width: 28px;
+  height: 26px;
+  padding: 0;
+  font-size: 11px;
+  border-radius: 7px;
+}
+
+.late-time-inline {
+  width: 95px;
+  height: 28px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.compact-actions {
+  margin-top: 0;
+}
+
+.compact-actions .tiny-btn {
+  height: 26px;
+  padding: 4px 7px;
+  font-size: 11px;
+}
+
+.attendance-row-card .compact-comment {
+  min-height: 48px;
+  margin-top: 4px;
+  font-size: 12px;
+}
+/* =========================
+   COMUNICACIÓN INTERNA COMPACTA
+========================= */
+
+.right-column-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.internal-communication {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-left: 5px solid #38bdf8;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.internal-communication h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.internal-communication p {
+  margin: 4px 0 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.internal-communication details {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  margin-top: 8px;
+  padding: 8px 10px;
+}
+
+.internal-communication summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  color: #075985;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.internal-communication summary::after {
+  content: "Abrir";
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  background: #e0f2fe;
+  padding: 3px 7px;
+  border-radius: 999px;
+}
+
+.internal-communication details[open] summary::after {
+  content: "Cerrar";
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.internal-communication label {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.internal-communication input,
+.internal-communication select,
+.internal-communication textarea {
+  font-size: 13px;
+  min-height: 34px;
+}
+
+.internal-communication textarea {
+  min-height: 62px;
+}
+
+.internal-communication .btn {
+  width: auto;
+  min-width: auto;
+  padding: 7px 11px;
+  font-size: 12px;
+  border-radius: 9px;
+  margin-top: 8px;
+}
+
+.internal-communication .list-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #60a5fa;
+  border-radius: 11px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.internal-communication .task-card {
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #facc15;
+  border-radius: 11px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.internal-communication .task-card.resolved {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  border-left-color: #22c55e;
+}
+
+.internal-communication .task-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.internal-communication .task-actions .btn {
+  margin-top: 0;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+/* Pasteles por bloque principal */
+.grid-main > .card:nth-child(1) {
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+.grid-main > .card:nth-child(2),
+.grid-main > .right-column-stack > .card {
+  background: #fffaf0;
+  border: 1px solid #fde68a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .right-column-stack {
+    gap: 10px;
+  }
+
+  .internal-communication {
+    order: -1;
+  }
+}
+
+/* =========================
+   GLOBITOS MENSAJES INTERNOS
+========================= */
+
+.internal-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.internal-title-row h3 {
+  margin: 0;
+}
+
+.message-badge {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.internal-communication.has-pending-messages {
+  background: #fff7ed;
+  border-color: #fdba74;
+  border-left-color: #f97316;
+}
+
+.internal-communication.has-pending-messages h3 {
+  color: #9a3412;
+}
+
+.summary-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9a3412;
+  background: #ffedd5;
+  border: 1px solid #fed7aa;
+  padding: 3px 7px;
+  border-radius: 999px;
+}
+
+.internal-communication details summary {
+  gap: 8px;
+}
+
+.internal-communication details summary span:first-child {
+  flex: 1;
+}
+
+
+/* =========================
+   BOTONES DE ASISTENCIA POR COLOR
+========================= */
+
+.compact-status-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  opacity: 0.7;
+}
+
+.compact-status-btn.status-presente {
+  border-color: #86efac;
+  color: #166534;
+}
+
+.compact-status-btn.status-ausente {
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.compact-status-btn.status-justificada {
+  border-color: #bae6fd;
+  color: #075985;
+}
+
+.compact-status-btn.status-tarde {
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.compact-status-btn.status-presente.active {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+  opacity: 1;
+  font-weight: 800;
+}
+
+.compact-status-btn.status-ausente.active {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+  opacity: 1;
+  font-weight: 800;
+}
+
+.compact-status-btn.status-justificada.active {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+  color: #075985;
+  opacity: 1;
+  font-weight: 800;
+}
+
+.compact-status-btn.status-tarde.active {
+  background: #ffedd5;
+  border-color: #f97316;
+  color: #9a3412;
+  opacity: 1;
+  font-weight: 800;
+}
+
+.compact-status-btn.active {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   BOTÓN COMUNICACIÓN INTERNA
+========================= */
+
+.internal-communication-toggle {
+  width: 100%;
+  min-height: auto;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: none;
+  margin-bottom: 8px;
+}
+
+.internal-communication-toggle:hover {
+  background: #f1f5f9;
+}
+
+.internal-communication-toggle.has-pending-messages {
+  background: #fff7ed;
+  border-color: #fdba74;
+  color: #9a3412;
+}
+
+.internal-communication-toggle .message-badge {
+  margin-left: auto;
+}
+/* =========================
+   BOTÓN COMUNICACIÓN INTERNA - CORRECCIÓN COLOR
+========================= */
+
+.internal-communication-toggle {
+  background: #eff6ff !important;
+  color: #1e3a8a !important;
+  border: 1px solid #93c5fd !important;
+}
+
+.internal-communication-toggle span {
+  color: #1e3a8a !important;
+}
+
+.internal-communication-toggle:hover {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+.internal-communication-toggle.has-pending-messages {
+  background: #fff7ed !important;
+  color: #9a3412 !important;
+  border-color: #fdba74 !important;
+}
+
+.internal-communication-toggle.has-pending-messages span {
+  color: #9a3412 !important;
+}
+
+.internal-communication-toggle .message-badge {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* =========================
+   RESTAURAR COLORES BOTONES ASISTENCIA
+   Mantener este bloque al final del archivo
+========================= */
+
+.attendance-buttons .compact-status-btn,
+.compact-attendance-buttons .compact-status-btn {
+  border: 1px solid #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+  opacity: 0.75 !important;
+  font-weight: 700 !important;
+}
+
+/* Presente */
+.attendance-buttons .compact-status-btn.status-presente,
+.compact-attendance-buttons .compact-status-btn.status-presente {
+  border-color: #86efac !important;
+  color: #166534 !important;
+}
+
+.attendance-buttons .compact-status-btn.status-presente.active,
+.compact-attendance-buttons .compact-status-btn.status-presente.active {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #166534 !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Ausente */
+.attendance-buttons .compact-status-btn.status-ausente,
+.compact-attendance-buttons .compact-status-btn.status-ausente {
+  border-color: #fecaca !important;
+  color: #991b1b !important;
+}
+
+.attendance-buttons .compact-status-btn.status-ausente.active,
+.compact-attendance-buttons .compact-status-btn.status-ausente.active {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #991b1b !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Justificada */
+.attendance-buttons .compact-status-btn.status-justificada,
+.compact-attendance-buttons .compact-status-btn.status-justificada {
+  border-color: #bae6fd !important;
+  color: #075985 !important;
+}
+
+.attendance-buttons .compact-status-btn.status-justificada.active,
+.compact-attendance-buttons .compact-status-btn.status-justificada.active {
+  background: #e0f2fe !important;
+  border-color: #38bdf8 !important;
+  color: #075985 !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Tarde */
+.attendance-buttons .compact-status-btn.status-tarde,
+.compact-attendance-buttons .compact-status-btn.status-tarde {
+  border-color: #fed7aa !important;
+  color: #9a3412 !important;
+}
+
+.attendance-buttons .compact-status-btn.status-tarde.active,
+.compact-attendance-buttons .compact-status-btn.status-tarde.active {
+  background: #ffedd5 !important;
+  border-color: #f97316 !important;
+  color: #9a3412 !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Botón activo */
+.attendance-buttons .compact-status-btn.active,
+.compact-attendance-buttons .compact-status-btn.active {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   PRÉSTAMOS ABIERTOS COMPACTOS
+========================= */
+
+.infodesk-open-loans-card .section-title-row {
+  align-items: center;
+}
+
+.open-loans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.loan-compact-card {
+  background: #ffffff;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.loan-compact-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.loan-student-name,
+.loan-material-code {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #111827;
+}
+
+.loan-material-code {
+  color: #92400e;
+}
+
+.loan-compact-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.loan-compact-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.loan-compact-actions .btn {
+  margin-top: 0;
+}
+
+.loan-return-btn {
+  padding: 7px 9px !important;
+  font-size: 12px !important;
+  border-radius: 8px !important;
+}
+
+.loan-damaged-btn {
+  width: auto !important;
+  min-width: 54px !important;
+  padding: 5px 7px !important;
+  font-size: 10px !important;
+  border-radius: 7px !important;
+  opacity: 0.9;
+}
+
+.loan-damaged-btn:hover {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .open-loans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Login ── */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4f8;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-logo {
+  text-align: center;
+}
+
+.login-logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.login-logo p {
+  color: #666;
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-form label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 2px rgba(74,144,217,0.2);
+}
+
+.login-error {
+  color: #c0392b;
+  font-size: 0.88rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background: #fdf0f0;
+  border-radius: 6px;
+  border-left: 3px solid #c0392b;
+}
+
+.login-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.google-signin-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ── Header usuario ── */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.header-user {
+  font-size: 0.85rem;
+  color: #2c5282;
+  font-weight: 600;
+  background: #ebf4ff;
+  border: 1px solid #bee3f8;
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  white-space: nowrap;
+}
